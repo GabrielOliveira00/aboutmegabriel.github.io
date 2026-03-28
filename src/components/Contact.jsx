@@ -62,15 +62,10 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://www.google.com/',
+      href: 'https://www.linkedin.com/in/gabriel-oliveira-290719139/',
       color: 'hover:text-blue-400'
     },
-    {
-      icon: Twitter,
-      label: 'Twitter',
-      href: 'https://www.google.com/',
-      color: 'hover:text-sky-400'
-    }
+ 
   ]
 
   return (

@@ -21,7 +21,9 @@ function App() {
           <Hero />
           <About />
           <Skills />
+          {/*
           <Projects />
+           */}
           <Passions />
           <Contact />
         </main>

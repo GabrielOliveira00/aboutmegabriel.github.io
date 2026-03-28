@@ -26,7 +26,7 @@ const Header = () => {
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'Sobre Mim' },
     { id: 'skills', label: 'Habilidades' },
-    { id: 'projects', label: 'Projetos' },
+    
     { id: 'passions', label: 'Paixões' },
     { id: 'contact', label: 'Contato' }
   ]

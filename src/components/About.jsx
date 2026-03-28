@@ -24,7 +24,7 @@ const About = () => {
 
   const personalInfo = [
     { icon: User, label: 'Nome', value: 'Gabriel de Azevedo Oliveira' },
-    { icon: Calendar, label: 'Idade', value: '33 anos' },
+    { icon: Calendar, label: 'Idade', value: '34 anos' },
     { icon: MapPin, label: 'Localização', value: 'Brasil' },
     { icon: GraduationCap, label: 'Formação', value: 'Tecnólogo + 2 Pós-graduações' }
   ]

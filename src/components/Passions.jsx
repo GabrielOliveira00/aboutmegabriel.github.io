@@ -96,10 +96,10 @@ const Passions = () => {
   }
 
   return (
-    <section id="passions" className="py-20 bg-slate-900/50">
+    <section id="passions" className="bg-slate-700/50 border-slate-600 transition-colors pb-12">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 pt-14">
             Minhas <span className="text-emerald-400">Paixões</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
