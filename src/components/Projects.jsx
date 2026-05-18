@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import { ExternalLink, Github, Filter } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import Image from "next/image";
-
+import novaStore from "../assets/images/novaStore.jpg"
+import pulse from "../assets/images/pulse.jpg"
+import signal from "../assets/images/signal.jpg"
+import focus from "../assets/images/focus.jpg"
 
 
 
@@ -15,65 +17,43 @@ const Projects = () => {
       id: 1,
       title: 'E-commerce Responsivo - Nova Store',
       description: 'Plataforma completa de e-commerce com carrinho de compras, sistema de pagamento e painel administrativo.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'CSS3', 'JavaScript', 'Firebase'],
+      image: novaStore,
+      technologies: ['React', 'CSS3', 'JavaScript', 'Typescript'],
       category: 'web',
-      demoUrl: '#',
+      demoUrl: 'https://gabrieloliveira00.github.io/nova-store-portfolio/',
       githubUrl: '#',
       featured: true
     },
     {
       id: 2,
-      title: 'Dashboard Analytics',
-      description: 'Dashboard interativo para visualização de dados com gráficos dinâmicos e relatórios em tempo real.',
-      image: '/api/placeholder/400/250',
+      title: 'Landing Page Corporativa',
+      description: 'Dados, automações e operação em uma interface feita para vender.',
+      image: pulse,
       technologies: ['React', 'JavaScript', 'RESTful API'],
-      category: 'web',
-      demoUrl: '#',
+      category: 'landing',
+      demoUrl: 'https://gabrieloliveira00.github.io/portf-lio-pulse-project/',
       githubUrl: '#',
       featured: true
     },
     {
       id: 3,
-      title: 'Landing Page Corporativa',
-      description: 'Site institucional moderno e responsivo com animações suaves e otimização para SEO.',
-      image: '/api/placeholder/400/250',
+      title: 'Signal Deck',
+      description: 'Pesquise em qualquer conta pública para inspecionar o volume do repositório, a ariedade de idiomas, a frequência de atualizações e o desempenho do repositório',
+      image: signal,
       technologies: ['HTML5', 'CSS3', 'JavaScript'],
-      category: 'landing',
-      demoUrl: '#',
+      category: 'web',
+      demoUrl: 'https://gabrieloliveira00.github.io/signal-deck-portfolio/',
       githubUrl: '#',
       featured: false
     },
     {
       id: 4,
-      title: 'App de Gerenciamento',
-      description: 'Aplicação para gerenciamento de tarefas com interface intuitiva e sincronização em tempo real.',
-      image: '/api/placeholder/400/250',
+      title: 'Focus - App de Gerenciamento',
+      description: 'FocusFlow e um app de produtividade pessoal. Voce adiciona tarefas, define contexto, energia e janela ideal, depois acompanha o dia com mudanca de status e revisao de foco.',
+      image: focus,
       technologies: ['React', 'Firebase', 'CSS3'],
       category: 'app',
-      demoUrl: '#',
-      githubUrl: '#',
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'Portfolio Interativo',
-      description: 'Site portfolio com animações avançadas e design responsivo para showcasing de trabalhos.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'CSS3', 'JavaScript'],
-      category: 'portfolio',
-      demoUrl: '#',
-      githubUrl: '#',
-      featured: true
-    },
-    {
-      id: 6,
-      title: 'Sistema de Blog',
-      description: 'Plataforma de blog com editor de texto rico, sistema de comentários e categorização.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'RESTful API', 'CSS3'],
-      category: 'web',
-      demoUrl: '#',
+      demoUrl: 'https://gabrieloliveira00.github.io/focus-flow-portfolio/',
       githubUrl: '#',
       featured: false
     }
@@ -97,7 +77,7 @@ const Projects = () => {
       'JavaScript': 'bg-yellow-500/20 text-yellow-400 border-yellow-400/30',
       'CSS3': 'bg-purple-500/20 text-purple-400 border-purple-400/30',
       'HTML5': 'bg-orange-500/20 text-orange-400 border-orange-400/30',
-      'Firebase': 'bg-red-500/20 text-red-400 border-red-400/30',
+      'Typescript': 'bg-red-500/20 text-red-400 border-red-400/30',
       'RESTful API': 'bg-green-500/20 text-green-400 border-green-400/30'
     }
     return colors[tech] || 'bg-gray-500/20 text-gray-400 border-gray-400/30'
@@ -139,10 +119,10 @@ const Projects = () => {
               key={project.id}
               className="bg-slate-700/50 border-slate-600 hover:bg-slate-700 transition-all duration-300 transform hover:scale-105 group overflow-hidden"
             >
-              <Image></Image>
+            
               <div className="relative overflow-hidden">
-                <div className="w-full h-48 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 flex items-center justify-center">
-                  <div className="text-6xl opacity-50">🚀</div>
+                <div className="w-full h-62 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 flex items-center justify-center">
+                  <img src={project.image}></img>
                 </div>
                 {project.featured && (
                   <div className="absolute top-4 right-4 bg-emerald-500 text-white px-2 py-1 rounded-full text-xs font-medium">
@@ -150,10 +130,16 @@ const Projects = () => {
                   </div>
                 )}
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                  <Button size="sm" variant="outline" className="border-white text-white hover:bg-white hover:text-black">
-                    <ExternalLink size={16} className="mr-2" />
-                    Demo
-                  </Button>
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                 
+                  >
+                    <Button size="sm" variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+                      <ExternalLink size={16} className="mr-2" />
+                      Demo
+                    </Button>
+                  </a>
                   <Button size="sm" variant="outline" className="border-white text-white hover:bg-white hover:text-black">
                     <Github size={16} className="mr-2" />
                     Código
