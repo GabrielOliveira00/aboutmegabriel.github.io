@@ -2,6 +2,10 @@ import React, { useState } from 'react'
 import { ExternalLink, Github, Filter } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import Image from "next/image";
+
+
+
 
 const Projects = () => {
   const [selectedFilter, setSelectedFilter] = useState('all')
@@ -9,7 +13,7 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-commerce Responsivo',
+      title: 'E-commerce Responsivo - Nova Store',
       description: 'Plataforma completa de e-commerce com carrinho de compras, sistema de pagamento e painel administrativo.',
       image: '/api/placeholder/400/250',
       technologies: ['React', 'CSS3', 'JavaScript', 'Firebase'],
@@ -135,6 +139,7 @@ const Projects = () => {
               key={project.id}
               className="bg-slate-700/50 border-slate-600 hover:bg-slate-700 transition-all duration-300 transform hover:scale-105 group overflow-hidden"
             >
+              <Image></Image>
               <div className="relative overflow-hidden">
                 <div className="w-full h-48 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 flex items-center justify-center">
                   <div className="text-6xl opacity-50">🚀</div>
