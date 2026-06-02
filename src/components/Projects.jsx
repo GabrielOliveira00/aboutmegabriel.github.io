@@ -90,7 +90,7 @@ const Projects = () => {
       'CSS3': 'bg-purple-500/20 text-purple-400 border-purple-400/30',
       'HTML5': 'bg-orange-500/20 text-orange-400 border-orange-400/30',
       'Typescript': 'bg-red-500/20 text-red-400 border-red-400/30',
-      'RESTful API': 'bg-green-500/20 text-green-400 border-green-400/30'
+      'RESTful API': 'bg-green-500/20 text-green-400 border-green-400/30',
     }
     return colors[tech] || 'bg-gray-500/20 text-gray-400 border-gray-400/30'
   }
