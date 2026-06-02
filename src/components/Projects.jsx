@@ -6,6 +6,7 @@ import novaStore from "../assets/images/novaStore.jpg"
 import pulse from "../assets/images/pulse.jpg"
 import signal from "../assets/images/signal.jpg"
 import focus from "../assets/images/focus.jpg"
+import raiz from "../assets/images/raiz.jpg"
 
 
 
@@ -21,7 +22,7 @@ const Projects = () => {
       technologies: ['React', 'CSS3', 'JavaScript', 'Typescript'],
       category: 'web',
       demoUrl: 'https://gabrieloliveira00.github.io/nova-store-portfolio/',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/GabrielOliveira00/nova-store-portfolio',
       featured: true
     },
     {
@@ -32,7 +33,7 @@ const Projects = () => {
       technologies: ['React', 'JavaScript', 'RESTful API'],
       category: 'landing',
       demoUrl: 'https://gabrieloliveira00.github.io/portf-lio-pulse-project/',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/GabrielOliveira00/portf-lio-pulse-project',
       featured: true
     },
     {
@@ -43,7 +44,7 @@ const Projects = () => {
       technologies: ['HTML5', 'CSS3', 'JavaScript'],
       category: 'web',
       demoUrl: 'https://gabrieloliveira00.github.io/signal-deck-portfolio/',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/GabrielOliveira00/signal-deck-portfolio',
       featured: false
     },
     {
@@ -54,7 +55,18 @@ const Projects = () => {
       technologies: ['React', 'Firebase', 'CSS3'],
       category: 'app',
       demoUrl: 'https://gabrieloliveira00.github.io/focus-flow-portfolio/',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/GabrielOliveira00/focus-flow-portfolio',
+      featured: false
+    },
+    {
+      id: 5,
+      title: 'Raiz Atelier - Page com animações 3D',
+      description: 'FocusFlow e um app de produtividade pessoal. Voce adiciona tarefas, define contexto, energia e janela ideal, depois acompanha o dia com mudanca de status e revisao de foco.',
+      image: raiz,
+      technologies: ['React', 'Framer Motion', 'Vite', 'babylon.js', 'Typescript'],
+      category: 'app',
+      demoUrl: 'https://gabrieloliveira00.github.io/raiz-atelier-portfolio/',
+      githubUrl: 'https://github.com/GabrielOliveira00/raiz-atelier-portfolio',
       featured: false
     }
   ]
@@ -129,21 +141,26 @@ const Projects = () => {
                     Destaque
                   </div>
                 )}
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                   <a
                     href={project.demoUrl}
-                    target="_blank"
-                 
+                    target="_blank"                             
                   >
-                    <Button size="sm" variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+                    <Button size="sm" variant="outline" className="border-white hover:cursor-pointer hover:opacity-90">
                       <ExternalLink size={16} className="mr-2" />
                       Demo
                     </Button>
                   </a>
-                  <Button size="sm" variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                 
+                  >
+                  <Button size="sm" variant="outline" className="border-white hover:cursor-pointer hover:opacity-90">
                     <Github size={16} className="mr-2" />
                     Código
                   </Button>
+                  </a>
                 </div>
               </div>
 
